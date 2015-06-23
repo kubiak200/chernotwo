@@ -106,9 +106,33 @@ public class Login extends JFrame {
 		JButton btnNewButton = new JButton("Login");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				
+				String name = txtName.getText();
+				String address = txtAddress.getText();
+				int port = Integer.parseInt(txtPort.getText());
+				
+				
+				
+				login(name, address, port);
+				
 			}
+
+		
 		});
 		btnNewButton.setBounds(102, 257, 89, 23);
 		contentPane.add(btnNewButton);
 	}
+	
+	
+	/***
+	 * 
+	 * Login stuff here
+	 */
+	
+	private void login(String name, String address, int port) {
+		dispose();
+		System.out.println("Name: " + name + ", IP Address: " + address + ", Port: " + port);
+	}
+	
+	
 }
